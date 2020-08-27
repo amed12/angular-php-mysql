@@ -77,6 +77,7 @@
                 0 dan 5000</h1>
         </div>
         <div class="row">
+            <button onclick="pageRedirect()">Click me to do action</button>
         </div>
         <div id="header">
             <h1 class="page-header">3. Buat query / store procedure untuk menampilkan data yg masih memiliki relasir
@@ -123,6 +124,9 @@
         var startDate = new Date(2019, 0, 1);
         var endDate = new Date(2019, 0, 31);
         document.getElementById("demoBtn").onclick = function () { myFunction() };
+        function pageRedirect() {
+            window.location.replace("http://localhost/komunal-test/number2.php");
+        }
         function myFunction() {
             var foo = new Array(101);
             // var tit = ["Text 1", "Text 2", "Text 3", "Text 4", "Text 5"];
@@ -138,13 +142,13 @@
                         document.write('FizzBuzz' + '<br/>');
                         break;
                     case i % 3 == 0:
-                        document.write('Fizz' + '<br/>');                        break;
+                        document.write('Fizz' + '<br/>'); break;
                     case i % 5 == 0:
                         day = "Tuesday";
                         document.write('Buzz' + '<br/>');
                         break;
                     default:
-                        document.write('Item: ' + (i ) + ' of ' + '100' + '<br/>');
+                        document.write('Item: ' + (i) + ' of ' + '100' + '<br/>');
                 }
 
                 // document.write('Item: ' + (i + 1) + ' of ' + foo.length + '<br/>');
