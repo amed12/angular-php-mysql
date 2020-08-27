@@ -6,13 +6,13 @@ myApp.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
     $stateProvider
             .state('/', {
                 url: '/',
-                templateUrl: 'templates/student.html',
-                controller: 'student_contrloer',
+                templateUrl: 'templates/komunal.html',
+                controller: 'komunal_controller',
                 controllerAs: "std_ctrl",
               
                 resolve: {
                     'title': ['$rootScope', function ($rootScope) {
-                            $rootScope.title = "ANGULARJS CODEGINITER MySQL CRUD";
+                            $rootScope.title = "Komunal Test";
                         }]
                 }
 
