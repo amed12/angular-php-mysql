@@ -1,77 +1,41 @@
--- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Aug 25, 2017 at 03:33 AM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+/*
+SQLyog Ultimate v12.5.1 (32 bit)
+MySQL - 10.3.16-MariaDB : Database - crud
+*********************************************************************
+*/
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+/*!40101 SET NAMES utf8 */;
 
+/*!40101 SET SQL_MODE=''*/;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`crud` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
---
--- Database: `crud`
---
+USE `crud`;
 
--- --------------------------------------------------------
+/*Table structure for table `komunal` */
 
---
--- Table structure for table `students`
---
+DROP TABLE IF EXISTS `komunal`;
 
-CREATE TABLE `students` (
-  `student_id` int(11) NOT NULL,
-  `student_name` varchar(100) NOT NULL,
-  `email_address` varchar(100) NOT NULL,
-  `contact` varchar(30) NOT NULL,
-  `gender` varchar(15) NOT NULL,
-  `country` varchar(50) NOT NULL,
-  `datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE `komunal` (
+  `id` char(6) DEFAULT NULL,
+  `nama` varchar(20) DEFAULT NULL,
+  `idprev` char(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `students`
---
+/*Data for the table `komunal` */
 
-INSERT INTO `students` (`student_id`, `student_name`, `email_address`, `contact`, `gender`, `country`, `datetime`) VALUES
-(1, 'Rubel', 'r@a.com', '01712727574', 'Male', 'Bangladesh', '2017-08-23 10:15:23'),
-(2, 'B', 'b@adf.com', '123', 'Male', '', '2017-08-23 10:15:23'),
-(13, 'Abc', 'admin@bicri.com', 'asdf', 'Male', '', '2017-08-24 09:25:07'),
-(12, 'Abc', 'admin@bicri.com', '34534532', 'Female', '43534', '2017-08-24 09:07:00'),
-(6, 'asdf', 'bicri@admi.com', '345234', '', 'asdf', '2017-08-23 11:19:39'),
-(7, 'dsfg', 'bicri@admi.com', 'Female', 'asdf', '3245', '2017-08-23 11:21:53'),
-(8, 'Abc', 'bicri@admi.com', 'Male', 'dsa', '345', '2017-08-23 11:27:11'),
-(9, 'dsfg', 'bicri@admi.com', 'Female', 'asdf', 'asdf', '2017-08-23 11:27:53'),
-(10, 'ccde', 'admin@bicri.com', '53245', 'Male', 'asdf', '2017-08-23 11:30:37'),
-(11, 'Abc', 'admin@bicri.com', '34534532', 'Female', '2345', '2017-08-24 08:10:34'),
-(14, 'Abc', 'admin@bicri.com', '34534532', 'Male', 'asdf', '2017-08-24 09:44:21');
+insert  into `komunal`(`id`,`nama`,`idprev`) values 
+('X1Z76E','Silver',NULL),
+('X2P78J','Copper','X1Z76E'),
+('X3H097','Iron','X2P78J'),
+('Y1UH56','Gold',NULL),
+('Y2CRT3','Bronze','Y1UH56');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `students`
---
-ALTER TABLE `students`
-  ADD PRIMARY KEY (`student_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `students`
---
-ALTER TABLE `students`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

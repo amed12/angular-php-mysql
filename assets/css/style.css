@@ -77,8 +77,13 @@
 .mb-50{
     margin-bottom: 50px;
 }
- .tlogo{
+.tlogo{
         height:42px;
         width:42px;
         margin-top: 5px;
+    }
+
+    #header {
+      text-align: center;
+      font-family: 'Share Tech Mono', monospace;
     }
